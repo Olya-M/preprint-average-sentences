@@ -8,10 +8,6 @@ This is a tool with a graphical user interface that scrapes groups of articles f
 
 ![eg search 3](https://user-images.githubusercontent.com/68296887/134078745-c929c9e6-8c2d-4467-b340-1abe916b6120.png)
 
-Jupyter notebook output (for a search with 10 papers):
-
-![image](https://user-images.githubusercontent.com/68296887/134081514-42f1611c-0369-432c-8cab-0636771a1e8a.png)
-
 
 
 
