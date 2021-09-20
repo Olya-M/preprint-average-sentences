@@ -1,12 +1,14 @@
 # Preprint average sentences
 This is a tool with a graphical user interface that scrapes groups of articles from biorxiv or medrxiv searches, sumarrizes the articles by outputting the average sentences for each paragraph in each preprint, and clusters the articles based on the most average sentences. I made this when I wanted there to be a quick way to catch up on any new biomed topic. 
 
-#### In-use examples:
-![eg search 1](https://user-images.githubusercontent.com/68296887/134075228-33a31253-a1bf-4d98-bc12-0c17ba52653f.png)
+#### In-use example:
+![eg search 1](https://user-images.githubusercontent.com/68296887/134078645-c7ba8a72-aa70-48fe-9894-8d5b3489ad4f.png)
 
-![eg search 2](https://user-images.githubusercontent.com/68296887/134075237-9d33dc76-9c88-4117-82f1-898218a2547e.png)
+![eg search 2](https://user-images.githubusercontent.com/68296887/134078656-af488441-df05-4382-a1cd-7ae4a012a2ce.png)
 
-![eg search 3](https://user-images.githubusercontent.com/68296887/134078227-5f0a076b-9e5d-4428-b5d6-2c1f2c81ad60.png)
+![eg search 3](https://user-images.githubusercontent.com/68296887/134078745-c929c9e6-8c2d-4467-b340-1abe916b6120.png)
+
+
 
 The webscraping is done with [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/). Sentences embedding is done with an [all-mpnet-base-v2 pretrained sentence-transformers model](https://huggingface.co/sentence-transformers/stsb-mpnet-base-v2) downloaded via Hugging Face, average sentences are found via cosine similarity, and clustering is done with k-means clustering the sentence embeddings for the most average sentence per text. An automatic elbow method is used to choose the number of clusters. For each cluster, five keywords are returned. The GUI is built with [tkinter](https://tkdocs.com/). 
 
